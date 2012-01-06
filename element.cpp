@@ -398,7 +398,7 @@ FloatMatrix*  Element :: ComputeNewmarkLhsAt (TimeStep* stepN)
 // Computes the contribution of the receiver to the left-hand side of the
 // linear system, using Newmark's formula.
 {
-  FloatMatrix *m,*k,*lhs ;
+  FloatMatrix *m,*lhs ;
   double      beta,dt ;
 
   if (stepN->giveNumber() == 0) {
