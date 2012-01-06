@@ -852,7 +852,7 @@ void  Domain :: terminate (TimeStep* stepN)
 {
   TimeStep* nextStep ;
   Element*  elem ;
-  FILE      *s00File, *s01File, *disFile, *strFile, *hisFile ;
+  FILE      *s01File, *strFile ;
 
   int convergenceStatus = this->giveNLSolver()->giveConvergenceStatus();
 
@@ -1537,23 +1537,23 @@ void Domain :: exportMatlabPlotCommands(char* filename)
 	 if (compo == 1)
 	 {
 		fprintf(mlbFile,"plot_field(XGP,tri,'T3',sigma_%d(:,1:5:size(sigma_%d,2)));\n",stepNumber,stepNumber);
-		fprintf(mlbFile,"title('\sigma_{xx}'); \n");
+		fprintf(mlbFile,"title('\\sigma_{xx}'); \n");
 		fprintf(mlbFile,"stressFile = 'sigmaXX.eps' ; \n");
 	 }
 	 if (compo == 2)
 	 {
 		fprintf(mlbFile,"plot_field(XGP,tri,'T3',sigma_%d(:,2:5:size(sigma_%d,2)));\n",stepNumber,stepNumber);
-		fprintf(mlbFile,"title('\sigma_{yy}'); \n");
+		fprintf(mlbFile,"title('\\sigma_{yy}'); \n");
 		fprintf(mlbFile,"stressFile = 'sigmaYY.eps' ; \n");
 	 }
 	 if (compo == 3)
 	 {
 		fprintf(mlbFile,"plot_field(XGP,tri,'T3',sigma_%d(:,3:5:size(sigma_%d,2)));\n",stepNumber,stepNumber);
-		fprintf(mlbFile,"title('\sigma_{xy}'); \n");
+		fprintf(mlbFile,"title('\\sigma_{xy}'); \n");
 		fprintf(mlbFile,"stressFile = 'sigmaXY.eps' ; \n");
 	 }
 	 if (compo == 4){
-		fprintf(mlbFile,"title('\sigma_{zz}'); \n");
+		fprintf(mlbFile,"title('\\sigma_{zz}'); \n");
 		fprintf(mlbFile,"stressFile = 'sigmaZZ.eps' ; \n");
 	 }
 	 if (compo == 5)
@@ -1678,7 +1678,6 @@ void Domain :: exportCrackGeoToMatlab(char* filename)
 {
   string crack("crack");
   string bracket(" = [\n");
-  char stepnum[32];
 
   string theString = crack + bracket; //string to store the geo of crack
 

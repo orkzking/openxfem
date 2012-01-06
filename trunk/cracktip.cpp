@@ -193,14 +193,14 @@ std::valarray<double> CrackTip::computeInteractionIntegral(TimeStep* stepN)
 // 5- computation of the auxilliary fields: AuxStress and AuxEps and AuxGradDisp
 // 6- computation of I1 and I2
 {
-  FloatArray   *sigma,*epsilon,*dQdx,*U ;
+  FloatArray   *sigma,*epsilon,*U ;
   FloatMatrix  *dNdx,*D,*B,*rdu1dx,*rt,*LocalGradDisp ;
   Node         *aNode ; 
   Mu::Point    *point,*coord,*globalCoordGP ;
   GaussPoint   *gp;
   GaussPoint** gaussPointArray;
   IntArray     *nodeArr ;
-  double       dV,a ;
+  double       dV ;
   size_t       numOfNodes ;
   double       dqdx1, dqdx2 ;
   std::valarray<double> I(0.,2) ;         // interaction integral I(1,2) of modes I and II

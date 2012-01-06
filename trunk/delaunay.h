@@ -204,7 +204,7 @@ public:
 	inline virtual bool inCircumCircle(const Point *p) const ;
 
 	inline virtual std::pair< Point*,  Point*> nearestEdge(const Point p)  ;
-	virtual std::pair< Point*,  Point*> commonEdge(const DelaunayTreeItem * t) { return std::pair< Point*,  Point*>(NULL, NULL) ; } 
+	virtual std::pair< Point*,  Point*> commonEdge(const DelaunayTreeItem * t) { return std::pair< Point*,  Point*>(reinterpret_cast<Point*>(NULL), reinterpret_cast<Point*>(NULL)) ; } 
 	
 	virtual bool isNeighbour( DelaunayTreeItem *) { return false ; } 
 	

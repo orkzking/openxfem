@@ -120,7 +120,7 @@ double  Iso3dElement :: computeVolumeAround (GaussPoint* aGaussPoint)
 // Returns the portion of the receiver which is attached to aGaussPoint.
 {
    FloatMatrix* jacob ;
-   double       determinant,weight,thickness,volume ;
+   double       determinant,weight,volume ;
 
 	Mu::Point *coord  = aGaussPoint -> giveCoordinates() ;
 	jacob       = this -> giveFEInterpolation()->giveJacobianMatrixAt(domain,this->giveNodeArray(),coord);

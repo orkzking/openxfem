@@ -597,7 +597,7 @@ inline bool DelaunayTriangle::isVertex(const Point * p) const
 std::pair<Point*, Point*> DelaunayTriangle::commonEdge(const DelaunayTreeItem * t) 
 {
 	if(t == this)
-		return std::pair<Point*, Point*>(NULL, NULL) ;
+		return std::pair<Point*, Point*>(reinterpret_cast<Point*>(NULL), reinterpret_cast<Point*>(NULL)) ;
 	
 	if(t->isTriangle)
 	{
@@ -621,7 +621,7 @@ std::pair<Point*, Point*> DelaunayTriangle::commonEdge(const DelaunayTreeItem * 
 	}
 	
 	//assert(false) ;
-	return std::pair< Point*,  Point*>(NULL, NULL) ;
+	return std::pair< Point*,  Point*>(reinterpret_cast<Point*>(NULL), reinterpret_cast<Point*>(NULL)) ;
 }
 
 std::pair< Point*,  Point*> DelaunayDemiPlane::commonEdge(const DelaunayTreeItem * t) 
@@ -662,7 +662,7 @@ std::pair< Point*,  Point*> DelaunayDemiPlane::commonEdge(const DelaunayTreeItem
 			return std::pair< Point*,  Point*>(t->first , t->second) ;
 	}
 	
-	return std::pair< Point*,  Point*>(NULL, NULL) ;
+	return std::pair< Point*,  Point*>(reinterpret_cast<Point*>(NULL), reinterpret_cast<Point*>(NULL)) ;
 }
 	
 
@@ -1113,7 +1113,7 @@ bool DelaunayRoot::inCircumCircle(const Point *p) const
 std::pair< Point*,  Point*> DelaunayRoot::nearestEdge(const Point p)
 {
 	assert(false) ;
-	return std::pair< Point*,  Point*>(NULL, NULL) ;
+	return std::pair< Point*,  Point*>(reinterpret_cast<Point*>(NULL), reinterpret_cast<Point*>(NULL)) ;
 }
 	
 std::vector<DelaunayTreeItem *> * DelaunayRoot::insert(Point *p, Star *s)

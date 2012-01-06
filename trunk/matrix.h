@@ -5,7 +5,7 @@
 #ifndef _MATRIX_H_
 #define _MATRIX_H_
 
-#include <stdlib.h>
+#include <cstdlib>
 
 class FloatMatrix ; class IntArray ;
 
@@ -32,7 +32,7 @@ public:
   void          checkBounds (int,int) ;
   size_t        giveNumberOfRows ()    const  { return nRows ;}
   size_t        giveNumberOfColumns () const  { return nColumns ;}
-  bool          isSquare () const             { return (! nRows-nColumns) ;}
+  bool          isSquare () const             { return (nRows==nColumns) ;}
 };
 
 #endif // _MATRIX_H
