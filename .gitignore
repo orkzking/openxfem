@@ -12,3 +12,5 @@
 *.rc
 ipch/*
 *.vcxproj.*
+*.sdf
+*.suo
