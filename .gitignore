@@ -1,0 +1,14 @@
+*.log
+*.obj
+*.tlog
+*.exe
+*.pdb
+*.idb
+*.manifest
+*.res
+*.ilk
+*.lastbuildstate
+*.cache
+*.rc
+ipch/*
+*.vcxproj.*
