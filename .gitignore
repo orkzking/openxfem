@@ -14,4 +14,8 @@ ipch/*
 *.vcxproj.*
 *.sdf
 *.suo
-doc/html/*
+*.h
+*.cpp
+*.cproject
+*.project
+.settings/*
