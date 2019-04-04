@@ -19,3 +19,6 @@ ipch/*
 *.cproject
 *.project
 .settings/*
+*.mingw
+*.cbp
+*.DEF
