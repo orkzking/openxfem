@@ -14,4 +14,4 @@ ipch/*
 *.vcxproj.*
 *.sdf
 *.suo
-*.opensdf
+doc/html/*
