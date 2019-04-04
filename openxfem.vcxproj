@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="3disoelement.cpp" />
+    <ClCompile Include="abssigneddistance.cpp" />
+    <ClCompile Include="ansplate.cpp" />
+    <ClCompile Include="auxiliaryfield.cpp" />
+    <ClCompile Include="bimatcrackasym.cpp" />
+    <ClCompile Include="boundary.cpp" />
+    <ClCompile Include="circle.cpp" />
+    <ClCompile Include="clock.cpp" />
+    <ClCompile Include="column.cpp" />
+    <ClCompile Include="constant.cpp" />
+    <ClCompile Include="constantstiffness.cpp" />
+    <ClCompile Include="crackgrowthdirectionlaw.cpp" />
+    <ClCompile Include="crackgrowthincrementlaw.cpp" />
+    <ClCompile Include="crackinterior.cpp" />
+    <ClCompile Include="crackjunction.cpp" />
+    <ClCompile Include="cracktip.cpp" />
+    <ClCompile Include="deadwght.cpp" />
+    <ClCompile Include="delaunay.cpp" />
+    <ClCompile Include="diagmtrx.cpp" />
+    <ClCompile Include="dictionr.cpp" />
+    <ClCompile Include="discontinuousfunction.cpp" />
+    <ClCompile Include="dof.cpp" />
+    <ClCompile Include="domain.cpp" />
+    <ClCompile Include="elasticmaterial.cpp" />
+    <ClCompile Include="element.cpp" />
+    <ClCompile Include="enrichmentdetector.cpp" />
+    <ClCompile Include="enrichmentfunction.cpp" />
+    <ClCompile Include="enrichmentitem.cpp" />
+    <ClCompile Include="fei2dquadlin.cpp" />
+    <ClCompile Include="fei2dtrilin.cpp" />
+    <ClCompile Include="fei2dtriqua.cpp" />
+    <ClCompile Include="fei3dlineartetra.cpp" />
+    <ClCompile Include="femcmpnn.cpp" />
+    <ClCompile Include="fixedincrement.cpp" />
+    <ClCompile Include="flormtrx.cpp" />
+    <ClCompile Include="flotarry.cpp" />
+    <ClCompile Include="freader.cpp" />
+    <ClCompile Include="freestor.cpp" />
+    <ClCompile Include="gausspnt.cpp" />
+    <ClCompile Include="geometrydescription.cpp" />
+    <ClCompile Include="geometryentity.cpp" />
+    <ClCompile Include="geometry_2D.cpp" />
+    <ClCompile Include="geometry_base.cpp" />
+    <ClCompile Include="hole.cpp" />
+    <ClCompile Include="homogeneouscrackasym.cpp" />
+    <ClCompile Include="initial.cpp" />
+    <ClCompile Include="intarray.cpp" />
+    <ClCompile Include="integrationrule.cpp" />
+    <ClCompile Include="junctionfunction.cpp" />
+    <ClCompile Include="levelsetdescription.cpp" />
+    <ClCompile Include="lhs.cpp" />
+    <ClCompile Include="linsyst.cpp" />
+    <ClCompile Include="list.cpp" />
+    <ClCompile Include="load.cpp" />
+    <ClCompile Include="loadtime.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="material.cpp" />
+    <ClCompile Include="materialinterface.cpp" />
+    <ClCompile Include="mathfem.cpp" />
+    <ClCompile Include="mathutil.cpp" />
+    <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="matrixops.cpp" />
+    <ClCompile Include="maxhoopstress.cpp" />
+    <ClCompile Include="mitc4.cpp" />
+    <ClCompile Include="modifiedhomocrackasymp.cpp" />
+    <ClCompile Include="newmark.cpp" />
+    <ClCompile Include="newtonraphson.cpp" />
+    <ClCompile Include="nlsolver.cpp" />
+    <ClCompile Include="node.cpp" />
+    <ClCompile Include="nodload.cpp" />
+    <ClCompile Include="peak.cpp" />
+    <ClCompile Include="piecewis.cpp" />
+    <ClCompile Include="piecewiselinear.cpp" />
+    <ClCompile Include="planelast.cpp" />
+    <ClCompile Include="planeproblem.cpp" />
+    <ClCompile Include="plateiso.cpp" />
+    <ClCompile Include="plateiso4.cpp" />
+    <ClCompile Include="polymtrx.cpp" />
+    <ClCompile Include="polynoxy.cpp" />
+    <ClCompile Include="quad_u.cpp" />
+    <ClCompile Include="samplingcriterion.cpp" />
+    <ClCompile Include="skyline.cpp" />
+    <ClCompile Include="splitgaussquadrature.cpp" />
+    <ClCompile Include="standarddescriptio.cpp" />
+    <ClCompile Include="standardquadrature.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="stressarray.cpp" />
+    <ClCompile Include="string.cpp" />
+    <ClCompile Include="tetra4.cpp" />
+    <ClCompile Include="timestep.cpp" />
+    <ClCompile Include="timinteg.cpp" />
+    <ClCompile Include="tri6.cpp" />
+    <ClCompile Include="tri_u.cpp" />
+    <ClCompile Include="vertex.cpp" />
+    <ClCompile Include="voidenrichfunction.cpp" />
+    <ClCompile Include="vonmisesmaterial.cpp" />
+    <ClCompile Include="vonmisesmaterial_h.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="compiler.DEF" />
+    <None Include="debug.DEF" />
+    <None Include="verbose.DEF" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3disoelement.h" />
+    <ClInclude Include="abssigneddistance.h" />
+    <ClInclude Include="ansplate.h" />
+    <ClInclude Include="asymptoticfunction.h" />
+    <ClInclude Include="auxiliaryfield.h" />
+    <ClInclude Include="bendingcrackasymp.h" />
+    <ClInclude Include="bimatcrackasymp.h" />
+    <ClInclude Include="bodyload.h" />
+    <ClInclude Include="boundary.h" />
+    <ClInclude Include="circle.h" />
+    <ClInclude Include="clock.h" />
+    <ClInclude Include="column.h" />
+    <ClInclude Include="constant.h" />
+    <ClInclude Include="constantstiffness.h" />
+    <ClInclude Include="crackasymptotic.h" />
+    <ClInclude Include="crackgrowthdirectionlaw.h" />
+    <ClInclude Include="crackgrowthincrementlaw.h" />
+    <ClInclude Include="crackinterior.h" />
+    <ClInclude Include="crackjunction.h" />
+    <ClInclude Include="cracktip.h" />
+    <ClInclude Include="deadwght.h" />
+    <ClInclude Include="delaunay.h" />
+    <ClInclude Include="diagmtrx.h" />
+    <ClInclude Include="dictionr.h" />
+    <ClInclude Include="discontinuousfunction.h" />
+    <ClInclude Include="dof.h" />
+    <ClInclude Include="domain.h" />
+    <ClInclude Include="elasticmaterial.h" />
+    <ClInclude Include="element.h" />
+    <ClInclude Include="enrichmentdetector.h" />
+    <ClInclude Include="enrichmentfunction.h" />
+    <ClInclude Include="enrichmentitem.h" />
+    <ClInclude Include="fei2dquadlin.h" />
+    <ClInclude Include="fei2dtrilin.h" />
+    <ClInclude Include="fei2dtriquad.h" />
+    <ClInclude Include="fei3dlineartetra.h" />
+    <ClInclude Include="feinterpol.h" />
+    <ClInclude Include="feinterpol2d.h" />
+    <ClInclude Include="feinterpol3d.h" />
+    <ClInclude Include="femcmpnn.h" />
+    <ClInclude Include="fixedincrement.h" />
+    <ClInclude Include="flotarry.h" />
+    <ClInclude Include="flotmtrx.h" />
+    <ClInclude Include="freader.h" />
+    <ClInclude Include="freestor.h" />
+    <ClInclude Include="functors.h" />
+    <ClInclude Include="gausspnt.h" />
+    <ClInclude Include="geometrydescription.h" />
+    <ClInclude Include="geometryentity.h" />
+    <ClInclude Include="geometry_2D.h" />
+    <ClInclude Include="geometry_base.h" />
+    <ClInclude Include="hole.h" />
+    <ClInclude Include="homogeneouscrackasymp.h" />
+    <ClInclude Include="initial.h" />
+    <ClInclude Include="intarray.h" />
+    <ClInclude Include="integrationrule.h" />
+    <ClInclude Include="junctionfunction.h" />
+    <ClInclude Include="levelsetdescription.h" />
+    <ClInclude Include="lhs.h" />
+    <ClInclude Include="linsyst.h" />
+    <ClInclude Include="list.h" />
+    <ClInclude Include="load.h" />
+    <ClInclude Include="loadtime.h" />
+    <ClInclude Include="material.h" />
+    <ClInclude Include="materialinterface.h" />
+    <ClInclude Include="mathfem.h" />
+    <ClInclude Include="mathutil.h" />
+    <ClInclude Include="matrix.h" />
+    <ClInclude Include="matrixops.h" />
+    <ClInclude Include="maxhoopstress.h" />
+    <ClInclude Include="mitc4.h" />
+    <ClInclude Include="modifiedhomocrackasymp.h" />
+    <ClInclude Include="newmark.h" />
+    <ClInclude Include="newtonraphson.h" />
+    <ClInclude Include="nlsolver.h" />
+    <ClInclude Include="node.h" />
+    <ClInclude Include="nodload.h" />
+    <ClInclude Include="nullmaterial.h" />
+    <ClInclude Include="pair.h" />
+    <ClInclude Include="peak.h" />
+    <ClInclude Include="piecewis.h" />
+    <ClInclude Include="piecewiselinear.h" />
+    <ClInclude Include="planelast.h" />
+    <ClInclude Include="planeproblem.h" />
+    <ClInclude Include="plateiso.h" />
+    <ClInclude Include="plateiso4.h" />
+    <ClInclude Include="polymtrx.h" />
+    <ClInclude Include="polyno.h" />
+    <ClInclude Include="polynoxy.h" />
+    <ClInclude Include="quad_u.h" />
+    <ClInclude Include="samplingcriterion.h" />
+    <ClInclude Include="skyline.h" />
+    <ClInclude Include="sliceiters.h" />
+    <ClInclude Include="splitgaussquadrature.h" />
+    <ClInclude Include="standarddescription.h" />
+    <ClInclude Include="standardquadrature.h" />
+    <ClInclude Include="static.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="stressarray.h" />
+    <ClInclude Include="string.h" />
+    <ClInclude Include="tetra4.h" />
+    <ClInclude Include="timestep.h" />
+    <ClInclude Include="timinteg.h" />
+    <ClInclude Include="tri6.h" />
+    <ClInclude Include="tri_u.h" />
+    <ClInclude Include="vectorlevelsetdescription.h" />
+    <ClInclude Include="vertex.h" />
+    <ClInclude Include="voidenrichfunction.h" />
+    <ClInclude Include="vonmisesmaterial.h" />
+    <ClInclude Include="vonmisesmaterial_h.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
