@@ -1527,11 +1527,19 @@ void Element :: exportStressResultsToMatlab(string& theStringStress)
 	 char val4c[50];
 	 char val5c[50];              //NVP 2005
 
+#ifdef __linux
+	 gcvt( val1, 17, val1c );
+	 gcvt( val2, 17, val2c );
+	 gcvt( val3, 17, val3c );
+	 gcvt( val4, 17, val4c );
+	 gcvt( val5, 17, val5c );    //NVP 2005
+#else
 	 _gcvt( val1, 17, val1c );
 	 _gcvt( val2, 17, val2c );
 	 _gcvt( val3, 17, val3c );
 	 _gcvt( val4, 17, val4c );
 	 _gcvt( val5, 17, val5c );    //NVP 2005
+#endif
 
 	 string space(" ");
 	 string newline("\n");
@@ -1584,10 +1592,14 @@ void Element :: exportStrainResultsToMatlab(string& theStringStrain)
 	 char val3c[50];
 	 char val4c[50];
 
+#ifdef __linux
+
+#else
 	 _gcvt( val1, 17, val1c );//transform the values val1... into chars val1c taking 14 digits
 	 _gcvt( val2, 17, val2c );
 	 _gcvt( val3, 17, val3c );
 	 _gcvt( val4, 17, val4c );
+#endif
 
 	 string space(" ");//define some useful strings for output
 	 string newline("\n");
@@ -1628,6 +1640,15 @@ void Element :: exportGaussPointsToMatlab(string& theString)
 	 N  = this->ComputeNmatrixAt(gp);
 	 XI = this->ComputeGlobalNodalCoordinates();
 	 globalCoords = N->Times(XI);
+#ifdef __linux
+	 gcvt(globalCoords->at(1),17,value);//transforms the double param1 in char param3 with 14 digits
+	 theString+=value;
+	 theString+=space;
+	 gcvt(globalCoords->at(2),17,value);
+	 theString+=value;
+	 theString+=space;
+	 theString+=newline;
+#else
 	 _gcvt(globalCoords->at(1),17,value);//transforms the double param1 in char param3 with 14 digits
 	 theString+=value;
 	 theString+=space;
@@ -1635,6 +1656,8 @@ void Element :: exportGaussPointsToMatlab(string& theString)
 	 theString+=value;
 	 theString+=space;
 	 theString+=newline;
+#endif
+
 	 delete N;
 	 delete XI;
 	 delete globalCoords;

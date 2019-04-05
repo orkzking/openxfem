@@ -223,8 +223,11 @@ char*  Domain :: giveDataFileName ()
 	 printf ("*************************************************************** \n") ;
 
 	 printf ("Please enter the name of the data file: \n") ;
-	 gets (s) ;
-
+#ifdef __linux
+	 std::cin>>s;
+#else
+	 gets(s) ;
+#endif
 
 	 dataFileName = new char[strlen(s)+1] ;
 	 strcpy (dataFileName,s) ;
@@ -885,13 +888,21 @@ void  Domain :: terminate (TimeStep* stepN)
   string comment("%");
   string st(mlbFileName);
   st +="_";
+#ifdef __linux
+  char buffer[50];
+  itos(stepN->giveNumber(),buffer); // convert the step number into a char*
+  st.append(buffer);
+  st += "  Convergence Status =";
+  itos(this->giveNLSolver()->giveConvergenceStatus(),buffer); // convert the convergence status into a char*
+  st.append(buffer);
+#else
   char buffer[50];
   itoa(stepN->giveNumber(),buffer,10); // convert the step number into a char*
   st.append(buffer);
   st += "  Convergence Status =";
   itoa(this->giveNLSolver()->giveConvergenceStatus(),buffer,10); // convert the convergence status into a char*
   st.append(buffer);
-
+#endif
   comment +=st+"\n";
 
   if (stepN->giveNumber() == 1)
@@ -1771,7 +1782,11 @@ void Domain :: exportElementResultsToMatlab(char* filename)
   string sigma("sigma_");
   string bracket(" = [ \n");
   char stepnum[32];
+#ifdef __linux
+  itos(stepNumber,stepnum);
+#else
   _itoa(stepNumber,stepnum,10);
+#endif
   sigma += stepnum;
   string theString = sigma+bracket; //string to store the stresses at the elements
 

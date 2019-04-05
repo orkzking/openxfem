@@ -16,3 +16,6 @@ ipch/*
 *.suo
 *.o
 doc/html/*
+XL_Default/*
+openxfem++
+.settings/*
