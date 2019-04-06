@@ -5,7 +5,9 @@ This is an opensource code I found on google code several years ago.
 As the name let one guess it is a e**X**tended **F**inite **E**lement **M**ethod (**XFEM**) code. 
 As far as I looked through the source code, it doesn't run in parallel and has got some runtime issues (only compile in debug mode). 
 At the moment I use this code to test the functionallities of Git & GitHub. 
-E.g. working with a gh-pages branch to easily provide the documentation of this code online [here](https://orkzking/github.io/openxfem).
+E.g. working with a gh-pages branch to easily provide the documentation of this code online [here](https://orkzking/github.io/openxfem). 
+Also a Gitpitch presentation is in progress [here](https://gitpitch.com/orkzking/openxfem/master). 
+This is planed to be a step-by-step quickstart guide. 
 ## How to configure and install?
 To get this code runnig I created branches for different OS and/or IDEs. 
 The nearly original code in the master branch seems to compile under Windows with MinGW (I never tested this). 
