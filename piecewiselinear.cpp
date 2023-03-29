@@ -408,12 +408,21 @@ void PiecewiseLinear :: exportToMatlab(string& theString)
 	 x =(*i)->x ;  // the X coord. of ith vertex
 	 y =(*i)->y ;  // the Y coord. of ith vertex
 
+#ifdef WIN32
 	 _gcvt(x,6,value);     // transforms the double param1 in char param3 with 3 digits
 	 theString += value;
 	 theString += space;
 	 _gcvt(y,6,value);
 	 theString += value;
 	 theString += space;
+#else
+   qgcvt(x,6,value);     // transforms the double param1 in char param3 with 3 digits
+	 theString += value;
+	 theString += space;
+	 qgcvt(y,6,value);
+	 theString += value;
+	 theString += space;
+#endif
 	 theString += newline;
   }
 

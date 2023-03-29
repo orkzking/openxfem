@@ -140,6 +140,7 @@ void Cercle::exportToMatlab(std::string& theString)
   double y = this->giveCenter()->giveCoordinate(2) ; 
   double r = this->giveRadius() ;
 
+#ifdef WIN32
   _gcvt(x,6,value);     // transforms the double param1 in char param3 with 3 digits
   theString += value;
   theString += space;
@@ -149,7 +150,17 @@ void Cercle::exportToMatlab(std::string& theString)
   _gcvt(r,6,value);
   theString += value;
   theString += space;
-
+#else
+  qgcvt(x,6,value);     // transforms the double param1 in char param3 with 3 digits
+  theString += value;
+  theString += space;
+  qgcvt(y,6,value);
+  theString += value;
+  theString += space;
+  qgcvt(r,6,value);
+  theString += value;
+  theString += space;
+#endif
   theString += newline;
 }
 
