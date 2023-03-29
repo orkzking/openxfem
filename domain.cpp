@@ -223,7 +223,7 @@ char*  Domain :: giveDataFileName ()
 	 printf ("*************************************************************** \n") ;
 
 	 printf ("Please enter the name of the data file: \n") ;
-	 gets (s) ;
+	 cin >> s;//gets (s) ;
 
 
 	 dataFileName = new char[strlen(s)+1] ;
