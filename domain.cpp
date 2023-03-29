@@ -886,12 +886,19 @@ void  Domain :: terminate (TimeStep* stepN)
   string st(mlbFileName);
   st +="_";
   char buffer[50];
+#ifdef WIN32
   itoa(stepN->giveNumber(),buffer,10); // convert the step number into a char*
   st.append(buffer);
   st += "  Convergence Status =";
   itoa(this->giveNLSolver()->giveConvergenceStatus(),buffer,10); // convert the convergence status into a char*
   st.append(buffer);
-
+#else
+  itos(stepN->giveNumber(),buffer); // convert the step number into a char*
+  st.append(buffer);
+  st += "  Convergence Status =";
+  itos(this->giveNLSolver()->giveConvergenceStatus(),buffer); // convert the convergence status into a char*
+  st.append(buffer);
+#endif
   comment +=st+"\n";
 
   if (stepN->giveNumber() == 1)
@@ -1771,7 +1778,11 @@ void Domain :: exportElementResultsToMatlab(char* filename)
   string sigma("sigma_");
   string bracket(" = [ \n");
   char stepnum[32];
+#ifdef WIN32
   _itoa(stepNumber,stepnum,10);
+#else
+  itos(stepNumber,stepnum);
+#endif
   sigma += stepnum;
   string theString = sigma+bracket; //string to store the stresses at the elements
 
