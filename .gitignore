@@ -16,3 +16,4 @@ ipch/*
 *.suo
 doc/html/*
 *.o
+inp/
