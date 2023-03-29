@@ -1,0 +1,46 @@
+/*
+  file COMPILER.DEF
+ 
+  This file sets some operating system functions and some platform dependent
+  programming variables.
+
+  1) CUSTOMIZING TO YOUR PLATFORM :
+  --------------------------------
+  This package is set up for 2 C++ implementations :
+     - Borland C++ (or Turbo C++) for PC
+     - AT&T C++ for Silicon Graphics workstation
+     - AT&T C++ for Sun workstation.
+  If you are using another compiler or another platform, the only thing
+  you have to do is to enrich this file accordingly.
+
+  How to set the program for your machine :
+  please activate the #define line correposnding to your platform, and
+  de-activate all others. For example, if your platform is Borland C++ for
+  PC, check below that this setting is on :
+	 #define BORLAND
+	 //#define SILICON_GRAPHICS
+         //#define SUN_STATION
+	 //#define OTHER_PLATFORM
+
+  2) PURPOSE OF THIS FILE
+  -----------------------
+  Switching to the adequate operating system calls for measuring  and
+  printing execution times.
+*/
+
+#ifndef BORLAND
+//#define BORLAND                  /* please activate either this line... */
+#endif
+
+#ifndef SILICON_GRAPHICS
+//# define SILICON_GRAPHICS      /* or this line ... */
+#endif
+
+#ifndef SUN_STATION
+//# define SUN_STATION           /* or this line ... */
+#endif
+
+#ifndef OTHER_PLATFORM
+# define OTHER_PLATFORM        /* or this line */
+#endif
+
