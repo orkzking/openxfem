@@ -286,7 +286,7 @@ char*  Domain :: giveDataFileName ()
 	 char temp4[64] = ""; // must declare a null string in order to use strncat
 
 	 strncat(temp4,s, strlen(s)-4); // copy temp to mlbFileNameFigs suppressing the last character (here the dot)
-	 fclose (mlbFile) ;
+	 //fclose (mlbFile) ;
   }
 
   return dataFileName ;
