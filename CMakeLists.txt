@@ -6,4 +6,8 @@ project(
     DESCRIPTION "eXtended Finite Element Tool"
 )
 
+file(GLOB openxfem_SRC CMAKE_CONFIGURE_DEPENDS "src/*.cpp")
+file(GLOB openxfem_INC CMAKE_CONFIGURE_DEPENDS "inc/*.h")
+file(GLOB openxfem_DEFS CMAKE_CONFIGURE_DEPENDS "defs/*.DEF")
+
 add_subdirectory(src)
