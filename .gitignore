@@ -19,3 +19,4 @@ doc/html/*
 inp/
 x64/
 x86/
+*Browse.VC.*
