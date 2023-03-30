@@ -17,3 +17,5 @@ ipch/*
 doc/html/*
 *.o
 inp/
+x64/
+x86/
